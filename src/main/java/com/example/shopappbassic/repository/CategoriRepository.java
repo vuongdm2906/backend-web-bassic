@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+
 public interface CategoriRepository extends JpaRepository<CategoryEntity, Long> {
     @Query(value = "select * from categories order by created_at desc ", nativeQuery = true)
     List<CategoryEntity> findAllCategories();
